@@ -6,44 +6,38 @@
 # Explicitly declare commonly used file extensions as either text or binary,
 # and tell Git how to handle line-endings normalization.
 
-## ===============
-## PureBasic files
-## ===============
-*.cfg   text
-*.pb    text
-*.pbf   text
-*.pbi   text
-*.pbp   text
-## -------------------------
-## GitHub Linguist Settings:
-## -------------------------
-*.cfg   linguist-generated=true
-*.pb    linguist-language=PureBasic
-*.pbf   linguist-language=PureBasic
-*.pbi   linguist-language=PureBasic
-*.pbp   linguist-generated=true
-*.pbp   linguist-language=XML
-## -------------------------
-## GitLab Linguist Settings:
-## -------------------------
-*.cfg   gitlab-generated=true
-*.pb    gitlab-language=PureBasic
-*.pbf   gitlab-language=PureBasic
-*.pbi   gitlab-language=PureBasic
-*.pbp   gitlab-generated=true
-*.pbp   gitlab-language=XML
+## PureBasic Files
+##################
+[attr]PureBasic text linguist-language=PureBasic gitlab-language=PureBasic
+*.cfg   text linguist-generated=true gitlab-generated=true
+*.pb    PureBasic
+*.pbf   PureBasic
+*.pbi   PureBasic
+*.pbp   linguist-language=XML linguist-generated=true
+*.pbp   gitlab-language=XML gitlab-generated=true
 
-## =============
+
 ## Shell Scripts
-## =============
-*.bat      text eol=crlf
-*.sh       text eol=lf
-*.ps1      text eol=crlf
-*.sed      text eol=lf
+################
+*.bat   text eol=crlf
+*.com   text eol=crlf
+*.sh    text eol=lf
+*.ps1   text eol=crlf
 
-## ===================
+
+## Repository Configuration
+###########################
+.editorconfig    text eol=lf
+.gitlab-ci.yml   text eol=lf
+.travis.yml      text eol=lf
+.gitattributes   text eol=lf
+.gitconfig       text eol=lf
+.gitignore       text eol=lf
+.gitmodules      text eol=lf
+
+
 ## Documentation Files
-## ===================
+######################
 *.adoc       text
 *.asciidoc   text
 *.md         text
@@ -56,34 +50,19 @@ COPYING      text
 LICENSE      text
 UNLICENSE    text
 
-## ===================
-## Configuration Files
-## ===================
-*.cnf          text
-*.conf         text
-*.config       text
-*.ini          text
-*.prefs        text
-.editorconfig  text
-.gitattributes text
-.gitconfig     text
-.gitignore     text
-.gitkeep       text
-.gitmodules    text eol=lf
 
-## ===============
 ## Zipped Archives
-## ===============
-*.7z       binary
-*.gz       binary
-*.jar      binary
-*.rar      binary
-*.tar      binary
-*.zip      binary
+##################
+*.7z    binary
+*.gz    binary
+*.jar   binary
+*.rar   binary
+*.tar   binary
+*.zip   binary
 
-## ==============
-## Graphics Files
-## ==============
+
+## Image & Graphics Files
+#########################
 *.bmp      binary
 *.gif      binary
 *.ico      binary
@@ -93,9 +72,9 @@ UNLICENSE    text
 *.svg      binary
 *.svgz     binary
 
-## ==================
-## Binary Executables
-## ==================
+
+## Compiled Binaries
+####################
 *.app      binary
 *.dll      binary
 *.dylib    binary

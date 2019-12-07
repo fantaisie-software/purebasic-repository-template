@@ -54,7 +54,7 @@ To learn more about the internal details of this template, consult the [reposito
 
 The template is just a boilerplate containing:
 
-- Git configurations designed to optimize PureBasic workflows.
+- Git configurations designed to optimize PureBasic workflow.
 - License files of PureBasic third party components.
 - README file template.
 
@@ -64,41 +64,57 @@ The template is just a boilerplate containing:
 - [`.gitattributes`](./.gitattributes "View source file")
 
 
-The included `.gitgnore` and `.gitattributes` files contain carefully designed patterns that will cover most PureBasic usage scenarios in cross-platform environments.
+The included `.gitignore` and `.gitattributes` files contain carefully designed patterns that will cover most PureBasic usage scenarios in cross-platform environments.
 
 The `.gitattributes` settings ensure that [end-of-line normalization] is handled properly by Git across all operating systems, avoiding conflicts between Windows and Linux/macOS in collaborative projects.
 It also defines some settings for [GitHub Linguist], to cover some PureBasic file extensions not recognized by Linguist, and to ensure proper statistics gathering for the project, and correct syntax highlighting in the GitHub WebUI.
 
-The `.gitgnore` file covers common ignore patterns for Windows, Linux and macOS, as well as excluding from the repository PureBasic project and configurations files — which usually are best kept out of a project, due to personal data leakage (with project files) and because these files will end up differing on every end-user machine, where they are overwritten and changed by the PureBasic IDE, thus polluting Git work directory (preventing branch switching) and exposing the project to spurious commits.
+The `.gitignore` file covers common ignore patterns for Windows, Linux and macOS, as well as excluding from the repository PureBasic project and configurations files — which usually are best kept out of a project, due to personal data leakage (with project files) and because these files will end up differing on every end-user machine, where they are overwritten and changed by the PureBasic IDE, thus polluting Git work directory (preventing branch switching) and exposing the project to spurious commits.
 
 [end-of-line normalization]: https://adaptivepatchwork.com/2012/03/01/mind-the-end-of-your-line/ "Learn more on Git EOL normalization from Tim Clem's article 'Mind the End of Your Line'"
 [GitHub Linguist]: https://github.com/github/linguist "Visit the GitHub Linguist repository"
 
 ### PureBasic License Files
 
-- [`/PBLicense.txt/`][LeAll] — Required by [all applications].
-- [`/PBLicense_3DEngine.txt/`][Le3DEngine] — [OGRE] license for [PureBasic 3D Engine] (OGRE).
-- [`/PBLicense_ExpatXML.txt/`][LeXML] — [Expat] license for the [XML library].
-- [`/PBLicense_PCRE.txt/`][LePCRE] — [PCRE] license for the [RegularExpression library].
-- [`/PBLicense_Scintilla.txt/`][LeScintilla] — [Scintilla] license for the [Scintilla library].
-- [`/PBLicense_udis86.txt/`][Leudis86] — [Udis86] license for the [disassembly commands] of the [OnError library].
+The license files included in this project contain up to date copies of the third party components licenses used by PureBasic.
 
-The above license files contain up to date copies of the third party components licenses used by PureBasic.
-These files are are a useful time saver for any project, for you can quickly concatenate them to your own license file when creating the license for the binary distributables, according to the PureLibs used by your project, and then just delete them.
-It's much faster than having to manually copy and paste get each license from the PureBasic Documentation.
+|                    file                   |                                required by                                |        source        |
+|-------------------------------------------|---------------------------------------------------------------------------|----------------------|
+| [`PBLicense.txt`][LF_All]                 | Required by [all applications].                                           | [link][LL_All]       |
+| [`PBLicense_3DEngine.txt`][LF_3DEngine]   | [OGRE] license for [PureBasic 3D Engine] (OGRE).                          | [link][LL_3DEngine]  |
+| [`PBLicense_ExpatXML.txt`][LF_XML]        | [Expat] license for the [XML library].                                    | [link][LL_XML]       |
+| [`PBLicense_PCRE.txt`][LF_PCRE]           | [PCRE] license for the [RegularExpression library].                       | [link][LL_PCRE]      |
+| [`PBLicense_Scintilla.txt`][LF_Scintilla] | [Scintilla] license for the [Scintilla library].                          | [link][LL_Scintilla] |
+| [`PBLicense_udis86.txt`][LF_udis86]       | [Udis86] license for the [disassembly commands] of the [OnError library]. | [link][LL_udis86]    |
+
+These files are a useful time saver for any project, for you can quickly concatenate them into a single `LICENSE` file for distributing your binaries, according to the PureLibs used by your project, and then just delete the original files of the template.
+It's much faster than having to manually copy and paste each license from the PureBasic Documentation.
 
 > **IMPORTANT NOTE** — These license files mirror the PureBasic version indicated at the beginning of this document.
 > Newer versions of PureBasic might introduce new third party components, and require additional credits and licenses.
-> If you're using a different version of PureBasic from the one indicated in this document, you should check the licenses indicated in the PureBasic Documentation of that version.
+> If you're using a different PureBasic version from the one indicated in this document, you should check the licenses provided in the [PureBasic Documentation] of that specific release.
 >
 > I'll strive to ensure that with every new PureBasic release this template and the license files are updated accordingly (if needed), but I can't be held responsible for any licenses omissions or mistakes — every author is responsible to ensure that his/her project fulfils all the license requirements.
 
-[Le3DEngine]: ./PBLicense_3DEngine.txt "View license file"
-[LeAll]: ./PBLicense.txt "View license file"
-[LeXML]: ./PBLicense_ExpatXML.txt "View license file"
-[LePCRE]: ./PBLicense_PCRE.txt "View license file"
-[LeScintilla]: ./PBLicense_Scintilla.txt "View license file"
-[Leudis86]: ./PBLicense_udis86.txt "View license file"
+<!-- PB License Files -->
+
+[LF_3DEngine]: ./PBLicense_3DEngine.txt "View license file"
+[LF_All]: ./PBLicense.txt "View license file"
+[LF_XML]: ./PBLicense_ExpatXML.txt "View license file"
+[LF_PCRE]: ./PBLicense_PCRE.txt "View license file"
+[LF_Scintilla]: ./PBLicense_Scintilla.txt "View license file"
+[LF_udis86]: ./PBLicense_udis86.txt "View license file"
+
+<!-- PB Licenses Links -->
+
+[LL_3DEngine]: https://www.purebasic.com/documentation/reference/license_engine3d.html "View license at PureBasic online Documentation"
+[LL_All]: https://www.purebasic.com/documentation/reference/license_application.html "View license at PureBasic online Documentation"
+[LL_XML]: https://www.purebasic.com/documentation/mainguide/expat.html "View license at PureBasic online Documentation"
+[LL_PCRE]: https://www.purebasic.com/documentation/mainguide/pcre.html "View license at PureBasic online Documentation"
+[LL_Scintilla]: https://www.purebasic.com/documentation/mainguide/scintilla.html "View license at PureBasic online Documentation"
+[LL_udis86]: https://www.purebasic.com/documentation/mainguide/udis86.html "View license at PureBasic online Documentation"
+
+<!-- 3rd party components and PureLibs -->
 
 [OGRE]: https://www.ogre3d.org "Visit OGRE website"
 [Expat]: https://libexpat.github.io "Visit Expat website"
@@ -157,6 +173,7 @@ The __[PureBasic Repository Template]__ is released into the public domain via t
 - [PureBasic Forum French]
 - [PureBasic Forum German]
 - [PureBasic Documentation]
+- [Fantaisie Software on GitHub]
 
 <!-----------------------------------------------------------------------------
                                REFERENCE LINKS
@@ -170,5 +187,6 @@ The __[PureBasic Repository Template]__ is released into the public domain via t
 [PureBasic Forum French]: https://www.purebasic.fr/french/ "Visit the PureBasic French Forum"
 [PureBasic Forum German]: https://www.purebasic.fr/german/ "Visit the PureBasic German Forum"
 [PureBasic Documentation]: https://www.purebasic.com/documentation/index.html "Go to the online PureBasic Documentation"
+[Fantaisie Software on GitHub]: https://github.com/fantaisie-software "Fantaisie Software GitHub profile"
 
 <!-- EOF -->
