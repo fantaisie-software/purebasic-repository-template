@@ -21,7 +21,10 @@ Created by [Tristano Ajmone] on August 12, 2019. Released into the Public Domain
 
 - [About this Template](#about-this-template)
     - [What Do I Get?](#what-do-i-get)
-        - [Git Configurations](#git-configurations)
+        - [Repository settings](#repository-settings)
+            - [Git Configurations](#git-configurations)
+            - [EditorConfig Settings](#editorconfig-settings)
+            - [Travis CI Validation](#travis-ci-validation)
         - [PureBasic License Files](#purebasic-license-files)
         - [README Template](#readme-template)
     - [License](#license)
@@ -54,11 +57,19 @@ To learn more about the internal details of this template, consult the [reposito
 
 The template is just a boilerplate containing:
 
-- Git configurations designed to optimize PureBasic workflow.
-- License files of PureBasic third party components.
-- README file template.
+- Repository settings designed to optimize PureBasic workflow:
+    + [Git configurations](#git-configurations "Jump to section").
+    + [EditorConfig code styles consistency](#editorconfig-settings "Jump to section").
+    + [Travis CI code styles validation](#travis-ci-validation "Jump to section").
+- [License files of PureBasic third party components](#purebasic-license-files "Jump to section").
+- [README document template](#readme-template "Jump to section").
 
-### Git Configurations
+### Repository settings
+
+Setting up a repository for optimal workflow is a time-consuming and repetitive task.
+This template provides well tested boilerplate settings designed to optimize cross-platform collaborative editing of PureBasic projects.
+
+#### Git Configurations
 
 - [`.gitignore` ](./.gitignore "View source file")
 - [`.gitattributes`](./.gitattributes "View source file")
@@ -73,6 +84,42 @@ The `.gitignore` file covers common ignore patterns for Windows, Linux and macOS
 
 [end-of-line normalization]: https://adaptivepatchwork.com/2012/03/01/mind-the-end-of-your-line/ "Learn more on Git EOL normalization from Tim Clem's article 'Mind the End of Your Line'"
 [GitHub Linguist]: https://github.com/github/linguist "Visit the GitHub Linguist repository"
+
+#### EditorConfig Settings
+
+- [`.editorconfig`](./.editorconfig)
+
+[EditorConfig] settings help preserving consistent coding styles in repositories where multiple developers work on the same files across various editors and IDEs, protecting it from mixed indentation styles and sizes, file encoding corruption, trailing white spaces and other code inconsistencies commonly found in collaborative editing.
+
+The template provides code style settings for PureBasic sources and other file types commonly found in PureBasic projects:
+
+- Repository configuration files (`.giattributes`, `.gitignore`, etc.)
+- Batch and Shell scripts
+- Markdown documentation.
+
+Modern editors will automatically pick up these settings from the `.editorconfig` file and enforce them project-wide, overriding user settings in favour of project-specific settings.
+[A list of free plug-ins is available at editorconfig.org] for editors and IDEs that don't support [EditorConfig] natively.
+
+[A list of free plug-ins is available at editorconfig.org]: https://editorconfig.org/#download "See the list of EditorConfig plug-ins"
+[EditorConfig]: https://editorconfig.org "Visit EditorConfig website"
+
+#### Travis CI Validation
+
+- [`.travis.yml`](./.travis.yml)
+- [`validate.sh`](./validate.sh)
+
+The template includes a basic [Travis CI] configuration to automatically validate every commit and pull request against the `.editorconfig` settings, to ensure that submitted contents honour the code style conventions of the project.
+[EditorConfig] validation is done via [EClint]  (Node.js).
+
+The `validate.sh` script can also be executed locally to test that all files in the project meet the [EditorConfig] requirements, before committing changes to the repository.
+
+[Travis CI] is a hosted [continuous integration] and deployment service to build and test software projects hosted at GitHub.
+The service is freely available for open-source projects and can be activated per-repository or profile-wide.
+
+[continuous integration]: https://en.wikipedia.org/wiki/Continuous_integration "See Wikipedia page on 'Continuous integration'"
+[EClint]: https://www.npmjs.com/package/eclint "Visit the EClint page at NPM"
+[Node.js]: https://nodejs.org/en/ "Visit Node.js website"
+[Travis CI]: https://travis-ci.com "Visit Travis CI website"
 
 ### PureBasic License Files
 
