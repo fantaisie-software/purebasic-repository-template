@@ -1,6 +1,6 @@
 # PureBasic Repository Template [![CC0 Badge][CC0 Badge]][CC0 Link]
 
-- https://github.com/tajmone/purebasic-repository-template
+- https://github.com/fantaisie-software/purebasic-repository-template
 
 A boilerplate for quickly creating [PureBasic] projects with all the right settings in place.
 
@@ -45,10 +45,10 @@ For more detailed information on using repository templates, see:
 
 To learn more about the internal details of this template, consult the [repository Wiki].
 
-[by clicking on this link]: https://github.com/tajmone/purebasic-repository-template/generate "Create a new repository using the PureBasic Repository Template!"
+[by clicking on this link]: https://github.com/fantaisie-software/purebasic-repository-template/generate "Create a new repository using the PureBasic Repository Template!"
 [generate new repositories with repository templates]: https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/ "Read full article on GitHub Blog"
 [GitHub Help » Creating a repository from a template]: https://help.github.com/en/articles/creating-a-repository-from-a-template
-[repository Wiki]: https://github.com/tajmone/purebasic-repository-template/wiki "Go to the Wiki of the PureBasic Repository Template project"
+[repository Wiki]: https://github.com/fantaisie-software/purebasic-repository-template/wiki "Go to the Wiki of the PureBasic Repository Template project"
 
 ## What Do I Get?
 
@@ -149,7 +149,7 @@ To the extent possible under law, [Tristano Ajmone] has waived all copyright and
 The __[PureBasic Repository Template]__ is released into the public domain via the [CC0 1.0 Universal] dedication, so that it might be freely used for any project, without causing licenses conflicts and without imposing any restrictions or obligations (not even crediting or linking back).
 
 [CC0 1.0 Universal]: https://creativecommons.org/publicdomain/zero/1.0/ "Learn more about Creative Commons 0"
-[PureBasic Repository Template]: https://github.com/tajmone/purebasic-repository-template "Visit the PureBasic Repository Template project on GitHub"
+[PureBasic Repository Template]: https://github.com/fantaisie-software/purebasic-repository-template "Visit the PureBasic Repository Template project on GitHub"
 
 > ## No Copyright
 >
